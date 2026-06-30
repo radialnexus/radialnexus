@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RadialNexus — the Collaboration Paradigm</title>
+<meta name="description" content="From transaction to collaboration. RadialNexus is defining the Collaboration Paradigm — graphs as engines for human–AI collaboration — and building its first realization, The Intelligent Graph. Consulting today.">
+<style>
+  :root{
+    --bg:#0e0f15; --panel:#15161f; --panel2:#1a1b27; --ink:#ecedf2; --mut:#9a9db0;
+    --acc:#a78bfa; --acc2:#5fe3d0; --line:#262838; --maxw:920px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:
+        radial-gradient(1100px 560px at 82% -12%, #211b3a 0%, transparent 58%),
+        radial-gradient(820px 460px at 6% 4%, #11242a 0%, transparent 56%), var(--bg);
+       color:var(--ink);font:17px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+      background:rgba(14,15,21,.72);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:58px}
+  nav .brand{font-weight:800;font-size:15px;letter-spacing:.2px}
+  nav .brand .dot{color:var(--acc)}
+  nav .links{margin-left:auto;display:flex;gap:20px;font-size:14px}
+  nav .links a{color:var(--mut)} nav .links a:hover{color:var(--ink);text-decoration:none}
+  header.hero{padding:104px 0 60px}
+  .eyebrow{color:var(--acc2);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+  h1{font-size:clamp(40px,8vw,72px);line-height:1;margin:14px 0 0;letter-spacing:-1px;font-weight:850}
+  .tagline{font-size:clamp(20px,3vw,26px);color:var(--ink);font-weight:650;margin:14px 0 0}
+  .lede{font-size:19px;color:#c5c7d4;max-width:640px;margin:18px 0 0}
+  .lede b{color:var(--ink)}
+  .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+  .btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:650;font-size:15px;border:1px solid transparent}
+  .btn.primary{background:linear-gradient(180deg,#b39bff,#8f6df0);color:#0c0820;border-color:#8f6df0}
+  .btn.ghost{border-color:var(--line);color:var(--ink);background:var(--panel)}
+  .btn:hover{text-decoration:none;filter:brightness(1.07)}
+  section{padding:50px 0;border-top:1px solid var(--line)}
+  .kicker{color:var(--acc2);font-size:12px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;margin:0}
+  h2{font-size:clamp(23px,3.2vw,30px);margin:8px 0 0;letter-spacing:-.3px;font-weight:750}
+  section p{color:#c2c4d2;max-width:680px}
+  section p b{color:var(--ink)}
+  .reframe{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:26px 0 0;max-width:680px}
+  @media(max-width:620px){.reframe{grid-template-columns:1fr}}
+  .reframe .col{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:18px 18px}
+  .reframe .col h4{margin:0 0 8px;font-size:13px;letter-spacing:1px;text-transform:uppercase}
+  .reframe .t h4{color:var(--mut)} .reframe .c h4{color:var(--acc2)}
+  .reframe .col p{margin:0;font-size:14.5px;color:var(--mut);max-width:none}
+  figure{margin:28px 0 0}
+  figure img{width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:0 16px 50px rgba(0,0,0,.4);display:block}
+  figcaption{color:var(--mut);font-size:13px;margin-top:10px}
+  .grid{display:grid;gap:16px;margin-top:26px;grid-template-columns:repeat(3,1fr)}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
+        border-radius:14px;padding:22px 20px}
+  .card h3{margin:0 0 8px;font-size:16.5px;color:var(--ink)}
+  .card p{font-size:14.5px;color:var(--mut);margin:0;max-width:none}
+  .card .more{display:inline-block;margin-top:10px;font-size:13px;color:var(--acc)}
+  footer{border-top:1px solid var(--line);padding:40px 0 70px;color:var(--mut);font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .big-email{font-size:18px;font-weight:650;color:var(--ink)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand">Radial<span class="dot">·</span>Nexus</div>
+  <div class="links">
+    <a href="#paradigm">The Paradigm</a>
+    <a href="#do">What we do</a>
+    <a href="#why">Why us</a>
+    <a href="#contact">Work with us</a>
+    <a href="https://theintelligentgraph.com">The Intelligent Graph ↗</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">The Collaboration Paradigm · consulting today</div>
+  <h1>RadialNexus</h1>
+  <div class="tagline">From transaction to collaboration.</div>
+  <p class="lede">We're defining the <b>Collaboration Paradigm</b> — graphs as engines for human–AI
+    collaboration — and building its first realization, <b>The Intelligent Graph</b>. Today, we put
+    your relationship layer to work through hands-on consulting.</p>
+  <div class="cta">
+    <a class="btn primary" href="paradigm.html">Read the thesis</a>
+    <a class="btn ghost" href="#contact">Work with us</a>
+  </div>
+</div></header>
+
+<section id="paradigm"><div class="wrap">
+  <p class="kicker">The Paradigm</p>
+  <h2>We don't use AI. We collaborate with it.</h2>
+  <p>Today, the relationship with AI is <b>transactional</b> — prompt in, answer out, the model as
+    oracle. The shift that matters is <b>collaborative</b>: intelligence, of more than one kind,
+    participating in a shared space that accrues. And collaboration is, at bottom, about
+    <b>relationships</b> — which is why the substrate must treat them as first-class, and why the
+    graph must do more than describe; it must run.</p>
+  <div class="reframe">
+    <div class="col t"><h4>Transactional</h4><p>prompt → answer · the model as oracle · stateless · you query a tool</p></div>
+    <div class="col c"><h4>Collaborative</h4><p>participate in a shared space · it accrues · relationships first-class · the graph runs</p></div>
+  </div>
+  <figure>
+    <img src="img/coordinate-system.png" alt="A coordinate system for intelligence — navigate by coordinates, validate by structure">
+    <figcaption>A coordinate system for intelligence: locate by coordinates, navigate by relationships, validate by structure.</figcaption>
+  </figure>
+  <p style="margin-top:22px">→ <a href="paradigm.html">From Transaction to Collaboration — the full thesis</a></p>
+</div></section>
+
+<section id="do"><div class="wrap">
+  <p class="kicker">What we do</p>
+  <h2>Turn your relationship layer into something that earns its keep.</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Proof-of-value graph apps</h3>
+      <p>A fixed-scope engagement that turns one real dataset — conversations, support, a
+        knowledge base — into a connected graph that earns its keep, with a path to a production
+        system of record.</p>
+    </div>
+    <div class="card">
+      <h3>The Intelligent Graph (TIG)</h3>
+      <p>The Paradigm's first realization: a non-destructive overlay that recovers the concept and
+        relationship layer extraction pipelines throw away, makes it traversable, and lets the graph
+        act.</p>
+      <a class="more" href="https://theintelligentgraph.com">theintelligentgraph.com →</a>
+    </div>
+    <div class="card">
+      <h3>Conversational system of record</h3>
+      <p>A connected graph that complements your CRM rather than replacing it — capturing how people
+        and topics actually relate across calls, chats, and support.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="who"><div class="wrap">
+  <p class="kicker">Who it's for</p>
+  <h2>Teams who want their own graph — right-sized, governed, and theirs.</h2>
+  <p>Teams in <b>enterprise healthcare and B2B customer management</b> who want their own graph —
+    not a hyperscale platform. We pair with <b>Solstone</b> for capture-to-graph in a single,
+    self-contained stack.</p>
+</div></section>
+
+<section id="why"><div class="wrap">
+  <p class="kicker">Why us</p>
+  <h2>A forty-year through-line, and one conviction.</h2>
+  <p>From rule-based expert systems and the early Semantic Web to multi-billion-node production
+    graphs — and a single conviction that <b>relationships come first</b>. Founded by
+    <b>Michael Bauer</b>. → <a href="https://michaelbauer.com" target="_blank">michaelbauer.com</a></p>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <p class="kicker">Work with us</p>
+  <h2>Start with a proof-of-value engagement.</h2>
+  <p>We'll scope one dataset, ship a working graph, and show you what your relationship layer is
+    worth.</p>
+  <p class="big-email" style="margin-top:18px">
+    <a href="mailto:me@michaelbauer.com">me@michaelbauer.com</a></p>
+</div></section>
+
+<footer><div class="wrap">
+  <div>© 2026 RadialNexus LLC · <span class="mono">radialnexus.com</span></div>
+  <div><a href="paradigm.html">The Paradigm</a> ·
+       <a href="https://theintelligentgraph.com">The Intelligent Graph</a> ·
+       <a href="https://michaelbauer.com">Michael Bauer</a></div>
+</div></footer>
+
+</body>
+</html>
